@@ -9,13 +9,20 @@ const Counter = () => {
     const timesByTwelve = () => {
 
         setCount( count+1 );
-        setTwelveTimes( count* 12);
+        setTwelveTimes( count* 12 );
     }  
+
+    const resetAll = () => {
+        setCount(1);
+        setTwelveTimes(0);
+    }
         return (
             <div>
-                <h1>Counter = 12 x {count-1}</h1>
+                <h1>Sum = 12 x {count-1}</h1>
                 <h1>Twelve times: {twelvesTimes}</h1>
-                <button onClick={() => timesByTwelve()}>Twelve times</button>
+                <button onClick={() => timesByTwelve()}>Do it!</button>
+                <button onClick={() => resetAll()}>Reset</button>
+                <h6>Made for Inaaya</h6>
                
             </div>
         )
